@@ -48,6 +48,7 @@ const restaurantSchema = new mongoose.Schema(
       },
     },
     isActive: { type: Boolean, default: true },
+    photo: { type: String, default: '' },
   },
   { timestamps: true }
 );

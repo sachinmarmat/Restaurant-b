@@ -6,6 +6,7 @@ export const DEFAULT_RESTAURANT = {
   description:
     'Nestled in the heart of the city, Saffron Table has been serving unforgettable dining experiences for over two decades. Our chefs blend traditional recipes with modern techniques, using only the finest locally-sourced ingredients.',
   famousReason: 'Michelin-recommended fusion cuisine & legendary hospitality',
+  photo: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80',
   phone: '+1 (234) 567-8900',
   email: 'info@saffrontable.com',
   address: '42 Culinary Avenue, Downtown District, NY 10001',
