@@ -16,8 +16,13 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors({ origin: process.env.CLIENT_URL || 'http://localhost:5173', credentials: true }));
-app.use(express.json());
+app.use(cors({ 
+  origin: [
+    process.env.CLIENT_URL || 'http://localhost:5173',
+    'https://restaurant-f-alpha.vercel.app/'
+  ], 
+  credentials: true 
+}));app.use(express.json());
 
 app.get('/api/health', (req, res) => {
   res.json({ success: true, message: 'Restaurant API is running' });
