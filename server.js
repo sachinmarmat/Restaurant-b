@@ -2,7 +2,6 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
-import serverless from 'serverless-http';
 import authRoutes from './routes/authRoutes.js';
 import restaurantRoutes from './routes/restaurantRoutes.js';
 import bookingRoutes from './routes/bookingRoutes.js';
@@ -50,10 +49,4 @@ const startServer = async () => {
   }
 };
 
-// Only start the server when running in a non-serverless environment
-if (process.env.SERVERLESS !== 'true') {
-  startServer();
-}
-
-// Export handler for serverless platforms
-export const handler = serverless(app);
+startServer();
